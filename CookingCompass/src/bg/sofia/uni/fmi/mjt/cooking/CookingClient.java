@@ -38,7 +38,7 @@ public class CookingClient {
         this.client = client;
     }
 
-    public List<Recipe> converter(String jsonResponse)
+    private List<Recipe> convertToArray(String jsonResponse)
             throws IOException, InterruptedException {
         Gson gson = new Gson();
         Response response = gson.fromJson(jsonResponse,
@@ -83,7 +83,7 @@ public class CookingClient {
                 throw new RequestTimeoutException();
             }
 
-            return converter(jsonResponse.body());
+            return convertToArray(jsonResponse.body());
         } catch (IOException | InterruptedException e) {
             throw new RuntimeException();
         }

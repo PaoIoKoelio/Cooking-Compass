@@ -7,8 +7,8 @@ import java.util.Collection;
 
 public class URLMaker {
     private static final String API_ENDPOINT = "https://api.edamam.com/api/recipes/v2";
-    private static final String APP_ID = "e81c75e1";
-    private static final String APP_KEY = "4d5f15ebb11bace49edf6660840b5499";
+    private static final String APP_ID = "";
+    private static final String APP_KEY = "";
 
     public static String makeKeywordURL(Collection<String> keywords) {
         StringBuilder url = new StringBuilder();
